@@ -15,7 +15,7 @@ class Time{
     }
     public void setHour(int hour){
         this.hour = hour;
-        if(hour > 0 || hour <= 24){
+        if(hour > 0 && hour <= 24){
              this.hour = hour;
         }else{
             System.out.println("Invalid hour value");
@@ -28,7 +28,7 @@ class Time{
     }
     public void setMinute(int minute){
        
-        if(minute > 0 || minute < 60){
+        if(minute > 0 && minute < 60){
              this.minute = minute;
         }else{
             System.out.println("Invalid minute value");
@@ -40,7 +40,7 @@ class Time{
         return second;
     }
     public void setSecond(int second){
-        if(second > 0 || second < 60){
+        if(second > 0 && second < 60){
             this.second = second;
         }else{
             System.out.println("Invalid second value");
@@ -62,7 +62,13 @@ public class App {
         System.out.println("Minute: " + t1.getMinute());
         System.out.println("Second: " + t1.getSecond());
 
-        
+        t1.setHour(55);
+        t1.setMinute(45);
+        t1.setSecond(50);
+        System.out.println("Updated Time:");
+        System.out.println("Hour: " + t1.getHour());        
+        System.out.println("Minute: " + t1.getMinute());
+        System.out.println("Second: " + t1.getSecond());
 
     }
 }
