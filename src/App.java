@@ -60,6 +60,7 @@ public class App {
         System.out.println("Hello, World!");
         Time t1 = new Time(10, 20, 50);
 
+        //t1.hour = 25; // Direct access to hour variable (not recommended)
         
         System.out.println("Second: " + t1.getSecond());
         System.out.println("Minute: " + t1.getMinute());
